@@ -15,9 +15,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Import Routes
 const userRoute = require('./routes/users');
+const authRoute = require('./routes/auth');
 
 // Middlewares
 app.use('/users', userRoute);
+
+app.use('/auth', authRoute);
 
 // Routes
 app.get('/', (req, res) =>{
@@ -36,4 +39,4 @@ mongoose.connect(
 );
 
 // Listen
-app.listen(process.env.PORT);
+app.listen(process.env.PORT, () => console.log('Server is up and running'));
