@@ -1,0 +1,293 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Aerathone",
+		"_postman_id": "d5fcbe94-d99a-e234-4e39-82a9a8b5717a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"description": "",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"url": "localhost:3000/api/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"atul@gmail.com\",\n\t\"password\": \"tester\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "1425f52f-f2f5-4ceb-b111-c5cc120ecddc",
+							"name": "Login",
+							"originalRequest": {
+								"url": "localhost:3000/api/login",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"atul@gmail.com\",\n\t\"password\": \"tester\"\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "authorization",
+									"key": "authorization",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGExNjBlOGMxOTk1OWQxNWM0NTU3YTEiLCJlbWFpbCI6ImF0dWxAZ21haWwuY29tIiwiaWF0IjoxNjIxMTg5MTg3fQ.BJpw2kCHqFZei25k0O3FF1flJA6SeLl7wlGkX1U5Ecw",
+									"description": "Custom header"
+								},
+								{
+									"name": "connection",
+									"key": "connection",
+									"value": "keep-alive",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "328",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Sun, 16 May 2021 18:19:47 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "W/\"148-uxC2mGS8DpK44jB5D997BcV1gjM\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "Express",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 1948,
+							"body": "{\"status\":\"success\",\"statusCode\":200,\"message\":\"User validated successfully\",\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGExNjBlOGMxOTk1OWQxNWM0NTU3YTEiLCJlbWFpbCI6ImF0dWxAZ21haWwuY29tIiwiaWF0IjoxNjIxMTg5MTg3fQ.BJpw2kCHqFZei25k0O3FF1flJA6SeLl7wlGkX1U5Ecw\",\"data\":{\"userFirstName\":\"Atul\",\"email\":\"atul@gmail.com\"}}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"url": "localhost:3000/api/register",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "bac31dfd-4da0-464c-b3b9-1db94cdb23ff",
+							"name": "Register",
+							"originalRequest": {
+								"url": "localhost:3000/api/register",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "connection",
+									"key": "connection",
+									"value": "keep-alive",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "309",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Sun, 16 May 2021 18:14:00 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "W/\"135-vLfYjN9DuKFjWelsFbd5Bkx5XnE\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "Express",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 932,
+							"body": "{\"status\":\"success\",\"statusCode\":200,\"message\":\"User created successfully\",\"data\":{\"_id\":\"60a160e8c19959d15c4557a1\",\"login\":[],\"userFirstName\":\"Atul\",\"userSecondName\":\"Sharma\",\"phoneNumber\":8888888881,\"email\":\"atul@gmail.com\",\"password\":\"$2a$10$JAT639svBP0YEJRFwXoQKOf4FengIcNWpCH8m82mxP3JEd7i2Boiy\",\"__v\":0}}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"description": "",
+			"item": [
+				{
+					"name": "List All Users",
+					"request": {
+						"url": "localhost:3000/api/user/listuser",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGExNjBlOGMxOTk1OWQxNWM0NTU3YTEiLCJlbWFpbCI6ImF0dWxAZ21haWwuY29tIiwiaWF0IjoxNjIxMTg5MTg3fQ.BJpw2kCHqFZei25k0O3FF1flJA6SeLl7wlGkX1U5Ecw",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "0f38a5dc-83ac-4b73-a538-c45884da527a",
+							"name": "List All Users",
+							"originalRequest": {
+								"url": "localhost:3000/api/user/listuser",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGExNjBlOGMxOTk1OWQxNWM0NTU3YTEiLCJlbWFpbCI6ImF0dWxAZ21haWwuY29tIiwiaWF0IjoxNjIxMTg5MTg3fQ.BJpw2kCHqFZei25k0O3FF1flJA6SeLl7wlGkX1U5Ecw",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "connection",
+									"key": "connection",
+									"value": "keep-alive",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "226",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Sun, 16 May 2021 18:25:41 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "W/\"e2-/IaoWojroSLmEhcVlmmRFuqrYOY\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "Express",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 700,
+							"body": "{\"status\":\"success\",\"statusCode\":200,\"message\":\"User details fetched successfully\",\"data\":[{\"_id\":\"60a160e8c19959d15c4557a1\",\"userFirstName\":\"Atul\",\"userSecondName\":\"Sharma\",\"phoneNumber\":8888888881,\"email\":\"atul@gmail.com\"}]}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
