@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/UserModel');
+const verify = require('./verifyToken');
 
 // get all users
 router.get('/', (req, res) => {
@@ -31,7 +32,7 @@ router.post('/', (req, res) => {
 });
 
 // get an user with id
-router.get('/:userId', (req, res) => {
+router.get('/:userId', verify, (req, res) => {
 	//console.log(req.params.userId);
 
 	User.findById(req.params.userId)
@@ -41,7 +42,7 @@ router.get('/:userId', (req, res) => {
 });
 
 // delete an user
-router.delete('/:userId', (req, res) => {
+router.delete('/:userId', verify, (req, res) => {
 	//console.log(req.params.userId);
 
 	User.deleteOne({_id: req.params.userId})
@@ -51,7 +52,7 @@ router.delete('/:userId', (req, res) => {
 });
 
 // update an user
-router.patch('/:userId', (req, res) => {
+router.patch('/:userId', verify, (req, res) => {
 	//console.log(req.params.userId);
 
 	User.updateOne(
