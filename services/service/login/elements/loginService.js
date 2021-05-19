@@ -34,7 +34,7 @@ class EmailLoginService {
         return responseTemplate;
       }
 
-      const checkPass = GeneralUtility.checkPassword(password, user.password);
+      const checkPass = await GeneralUtility.checkPassword(password, user.password);
       if (!checkPass) {
         return Object.assign(responseTemplate, { message: messages.INVALID_PWD });
       }
