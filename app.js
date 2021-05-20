@@ -37,6 +37,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/bugimages', express.static(`${__dirname}/images/bugs`));
 // route manager : all api routes defined
 app.use('/', RouteManager);
 
