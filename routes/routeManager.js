@@ -13,8 +13,10 @@ const router = express.Router();
 const ServerStatus = require('./route/index');
 const LoginRoute = require('./route/login');
 const UserRoute = require('./route/user');
+const FaqRoute = require('./route/faq');
 
 // stand alone route mappings defined below
+router.use('/api/faq', FaqRoute);
 router.use('/api/user', UserRoute);
 router.use('/api', LoginRoute);
 router.use('/', ServerStatus);
