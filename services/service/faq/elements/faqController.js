@@ -39,14 +39,8 @@ class FaqController {
 
   async get() {
     try {
-      if(this.request.params.id == 'getAll'){
-        const result = await this.service.getAll();
-        this.response.send(result);
-      }
-      else{
-        const result = await this.service.get(this.request.params.id);
-        this.response.send(result);
-      }
+      const result = await this.service.getAll(this.request.query);
+      this.response.send(result);
     } catch (err) {
       this.next(err);
     }

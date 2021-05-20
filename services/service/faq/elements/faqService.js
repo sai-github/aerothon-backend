@@ -84,8 +84,8 @@ class FaqService {
     };
   }
 
-  async getAll() {
-    const result = await this.faqRepository.fetchAllFaq();
+  async getAll(condition) {
+    const result = await this.faqRepository.fetchAllFaq(condition);
 
     return {
       status: 'success',

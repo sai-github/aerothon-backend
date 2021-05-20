@@ -9,6 +9,6 @@ const router = express.Router();
 router.post('/', AuthenticateRequest.authenticate(), (req, res, next) => new ServiceManager({ req, res, next }).faq.faqServices.add());
 router.patch('/:id', AuthenticateRequest.authenticate(), (req, res, next) => new ServiceManager({ req, res, next }).faq.faqServices.modify());
 router.delete('/:id', AuthenticateRequest.authenticate(), (req, res, next) => new ServiceManager({ req, res, next }).faq.faqServices.delete());
-router.get('/:id', AuthenticateRequest.authenticate(), (req, res, next) => new ServiceManager({ req, res, next }).faq.faqServices.get());
+router.get('/', AuthenticateRequest.authenticate(), (req, res, next) => new ServiceManager({ req, res, next }).faq.faqServices.get());
 
 module.exports = router;
