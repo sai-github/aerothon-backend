@@ -6,11 +6,9 @@ const AuthenticateRequest = require('../../middlewares/authenticateRequest');
 const router = express.Router();
 
 // map apis to controllers
-router.post('/add', AuthenticateRequest.authenticate(), (req, res, next) => new ServiceManager({ req, res, next }).faq.faqServices.add());
-router.patch('/modify/:id', AuthenticateRequest.authenticate(), (req, res, next) => new ServiceManager({ req, res, next }).faq.faqServices.modify());
-router.delete('/delete/:id', AuthenticateRequest.authenticate(), (req, res, next) => new ServiceManager({ req, res, next }).faq.faqServices.delete());
-
-router.get('/get/:id', AuthenticateRequest.authenticate(), (req, res, next) => new ServiceManager({ req, res, next }).faq.faqServices.get());
-router.get('/getAll', AuthenticateRequest.authenticate(), (req, res, next) => new ServiceManager({ req, res, next }).faq.faqServices.getAll());
+router.post('/', AuthenticateRequest.authenticate(), (req, res, next) => new ServiceManager({ req, res, next }).faq.faqServices.add());
+router.patch('/:id', AuthenticateRequest.authenticate(), (req, res, next) => new ServiceManager({ req, res, next }).faq.faqServices.modify());
+router.delete('/:id', AuthenticateRequest.authenticate(), (req, res, next) => new ServiceManager({ req, res, next }).faq.faqServices.delete());
+router.get('/:id', AuthenticateRequest.authenticate(), (req, res, next) => new ServiceManager({ req, res, next }).faq.faqServices.get());
 
 module.exports = router;

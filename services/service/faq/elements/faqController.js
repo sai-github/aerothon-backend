@@ -39,21 +39,19 @@ class FaqController {
 
   async get() {
     try {
-      const result = await this.service.get(this.request.params.id);
-      this.response.send(result);
+      if(this.request.params.id == 'getAll'){
+        const result = await this.service.getAll();
+        this.response.send(result);
+      }
+      else{
+        const result = await this.service.get(this.request.params.id);
+        this.response.send(result);
+      }
     } catch (err) {
       this.next(err);
     }
   }
 
-  async getAll() {
-    try {
-      const result = await this.service.getAll();
-      this.response.send(result);
-    } catch (err) {
-      this.next(err);
-    }
-  }
 }
 
 module.exports = FaqController;
