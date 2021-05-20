@@ -31,7 +31,7 @@
 					},
 					"response": [
 						{
-							"id": "1425f52f-f2f5-4ceb-b111-c5cc120ecddc",
+							"id": "5a25a57f-ec9c-417f-bde8-cbd743ffa099",
 							"name": "Login",
 							"originalRequest": {
 								"url": "localhost:3000/api/login",
@@ -126,7 +126,7 @@
 					},
 					"response": [
 						{
-							"id": "bac31dfd-4da0-464c-b3b9-1db94cdb23ff",
+							"id": "46f114bc-268f-4ce3-ae9a-42fd0ad66c5a",
 							"name": "Register",
 							"originalRequest": {
 								"url": "localhost:3000/api/register",
@@ -218,7 +218,7 @@
 					},
 					"response": [
 						{
-							"id": "0f38a5dc-83ac-4b73-a538-c45884da527a",
+							"id": "db372cf7-c479-48f7-a108-7ff5ef85db45",
 							"name": "List All Users",
 							"originalRequest": {
 								"url": "localhost:3000/api/user/listuser",
@@ -286,6 +286,265 @@
 							"body": "{\"status\":\"success\",\"statusCode\":200,\"message\":\"User details fetched successfully\",\"data\":[{\"_id\":\"60a160e8c19959d15c4557a1\",\"userFirstName\":\"Atul\",\"userSecondName\":\"Sharma\",\"phoneNumber\":8888888881,\"email\":\"atul@gmail.com\"}]}"
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Bug",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Bug",
+					"request": {
+						"url": "localhost:3000/api/bug/savebug",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGExNjQxNTcxNzA1MGQ3YTAwM2Y4OGYiLCJlbWFpbCI6ImF0dWxAZ21haWwuY29tIiwiaWF0IjoxNjIxMTg5Njg3fQ.YtkZer0UDerFZsNUqGl215czGBeftMl7V3YJjz8hlRA",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "bug",
+									"value": "",
+									"description": "",
+									"type": "file"
+								},
+								{
+									"key": "title",
+									"value": "Not able to register",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Not able to enter name with 3 characters",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "7ac0f246-2383-4fa9-a9ed-41d945b8ebb8",
+							"name": "Create Bug",
+							"originalRequest": {
+								"url": "localhost:3000/api/bug/savebug",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGExNjQxNTcxNzA1MGQ3YTAwM2Y4OGYiLCJlbWFpbCI6ImF0dWxAZ21haWwuY29tIiwiaWF0IjoxNjIxMTg5Njg3fQ.YtkZer0UDerFZsNUqGl215czGBeftMl7V3YJjz8hlRA",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "bug",
+											"description": "",
+											"type": "file",
+											"src": {
+												"0": {}
+											}
+										},
+										{
+											"key": "title",
+											"value": "Not able to register",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Not able to enter name with 3 characters",
+											"description": "",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "connection",
+									"key": "connection",
+									"value": "keep-alive",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "300",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Thu, 20 May 2021 18:44:41 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "W/\"12c-nbnt9yKSBcAR/O4e+oicH2gbPak\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "Express",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Fri May 21 2021 11:31:10 GMT+0530 (India Standard Time)",
+									"hostOnly": true,
+									"httpOnly": false,
+									"domain": "localhost",
+									"path": "/",
+									"secure": false,
+									"session": false,
+									"value": "1",
+									"key": "msg_send"
+								}
+							],
+							"responseTime": 224,
+							"body": "{\"status\":\"success\",\"statusCode\":200,\"message\":\"Bug created successfully\",\"data\":{\"_id\":\"60a6ae1932722d1670253b92\",\"title\":\"Not able to register\",\"description\":\"Not able to enter name with 3 characters\",\"imageUrl\":\"2021-05-20T18-44-41.742Z-WhatsApp-Image-2020-12-14-at-11.00.37-AM-(2).jpeg\",\"__v\":0}}"
+						}
+					]
+				},
+				{
+					"name": "List All Bug",
+					"request": {
+						"url": "localhost:3000/api/bug/listbug",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGExNjQxNTcxNzA1MGQ3YTAwM2Y4OGYiLCJlbWFpbCI6ImF0dWxAZ21haWwuY29tIiwiaWF0IjoxNjIxMTg5Njg3fQ.YtkZer0UDerFZsNUqGl215czGBeftMl7V3YJjz8hlRA",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "7c1f6f4f-b681-4bc2-b305-a52693507486",
+							"name": "List All Bug",
+							"originalRequest": {
+								"url": "localhost:3000/api/bug/listbug",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGExNjQxNTcxNzA1MGQ3YTAwM2Y4OGYiLCJlbWFpbCI6ImF0dWxAZ21haWwuY29tIiwiaWF0IjoxNjIxMTg5Njg3fQ.YtkZer0UDerFZsNUqGl215czGBeftMl7V3YJjz8hlRA",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "connection",
+									"key": "connection",
+									"value": "keep-alive",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "600",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Thu, 20 May 2021 18:45:00 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "W/\"258-3gmvZu+tyXyJ7Q2yqmYXin+TMJY\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "Express",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Fri May 21 2021 11:31:10 GMT+0530 (India Standard Time)",
+									"hostOnly": true,
+									"httpOnly": false,
+									"domain": "localhost",
+									"path": "/",
+									"secure": false,
+									"session": false,
+									"value": "1",
+									"key": "msg_send"
+								}
+							],
+							"responseTime": 106,
+							"body": "{\"status\":\"success\",\"statusCode\":200,\"message\":\"Bug details fetched successfully\",\"data\":[{\"_id\":\"60a6adce28024035510c4921\",\"title\":\"Not able to register\",\"description\":\"Not able to enter name with 3 characters\",\"imageUrl\":\"\",\"__v\":0},{\"_id\":\"60a6adf28b1d5606c156a4df\",\"title\":\"Not able to register\",\"description\":\"Not able to enter name with 3 characters\",\"imageUrl\":\"\",\"__v\":0},{\"_id\":\"60a6ae1932722d1670253b92\",\"title\":\"Not able to register\",\"description\":\"Not able to enter name with 3 characters\",\"imageUrl\":\"2021-05-20T18-44-41.742Z-WhatsApp-Image-2020-12-14-at-11.00.37-AM-(2).jpeg\",\"__v\":0}]}"
+						}
+					]
+				},
+				{
+					"name": "Get Image",
+					"request": {
+						"url": "localhost:3000/bugimages/2021-05-20T18-44-41.742Z-WhatsApp-Image-2020-12-14-at-11.00.37-AM-(2).jpeg",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
 				}
 			]
 		}
