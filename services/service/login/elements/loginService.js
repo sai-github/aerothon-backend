@@ -61,7 +61,12 @@ class EmailLoginService {
   async register(body) {
     const emailExist = await this.userRepository.fetchUser({ email: body.email });
     if (emailExist) {
-      return res.status(400).send('User already registered with given email');
+      //return res.status(400).send('User already registered with given email');
+      return {
+        status: 'failed',
+        statusCode: 400,
+        message: 'User already registered with given email'
+      };
     }
     const hashedPassword = await GeneralUtility.hashPassword(body.password);
     let userDetail = {
