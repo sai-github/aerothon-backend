@@ -17,6 +17,7 @@ const FaqRoute = require('./route/faq');
 const BugRoute = require('./route/bug');
 const BotRoute = require('./route/bot');
 const AnnouncementRoute = require('./route/announcement');
+const SearchLinkRoute = require('./route/searchLink');
 
 // stand alone route mappings defined below
 router.use('/api/faq', FaqRoute);
@@ -24,6 +25,7 @@ router.use('/api/user', UserRoute);
 router.use('/api/bug', BugRoute);
 router.use('/api/bot', BotRoute);
 router.use('/api/announcement', AnnouncementRoute);
+router.use('/api/searchLink', SearchLinkRoute);
 router.use('/api', LoginRoute);
 router.use('/', ServerStatus);
 
