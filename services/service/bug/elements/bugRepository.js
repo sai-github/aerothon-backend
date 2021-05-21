@@ -8,11 +8,14 @@ class BugRepository {
   }
 
   fetchBug(condition = {}) {
-    return this.bugModel.find(condition).exec();
+    return this.bugModel
+      .find(condition)
+      .sort([['priority', -1]])
+      .exec();
   }
 
   fetchAndUpdate(condition, fields) {
-    return this.bugModel.findOneAndUpdate(condition, fields).exec();
+    return this.bugModel.findOneAndUpdate(condition, fields, { new: true }).exec();
   }
 
   saveBug(Bug) {

@@ -11,6 +11,16 @@ const BugSchema = mongoose.Schema({
   },
   imageUrl: {
     type: String
+  },
+  priority: {
+    type: String,
+    required: true,
+    default: 'Low'
+  },
+  isActiveBug: {
+    type: Boolean,
+    required: true,
+    default: true
   }
 });
 
