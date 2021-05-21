@@ -19,7 +19,7 @@ class AnnouncementService {
   }
 
   async add(body) {
-    const announcementExist = await this.announcementRepository.fetchAnnouncement({ message: body.message });
+    const announcementExist = await this.announcementRepository.fetchAnnouncement({ title: body.title });
     if (announcementExist) {
       return {
         status : 'failed',
@@ -31,7 +31,9 @@ class AnnouncementService {
     let announcementDetail = {
       message: body.message,
       activeFrom: moment(body.activeFrom),
-      activeTill: moment(body.activeTill)
+      activeTill: moment(body.activeTill),
+      title: body.title,
+      type: body.type
     };
 
     if(body.appName){
@@ -52,7 +54,9 @@ class AnnouncementService {
     let announcementDetail = {
       message: body.message,
       activeFrom: moment(body.activeFrom),
-      activeTill: moment(body.activeTill)
+      activeTill: moment(body.activeTill),
+      title: body.title,
+      type: body.type
     };
 
     if(body.appName){
