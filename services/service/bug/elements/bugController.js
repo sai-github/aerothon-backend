@@ -33,6 +33,15 @@ class BugController {
       this.next(err);
     }
   }
+
+  async modify() {
+    try {
+      const result = await this.service.modify(this.request.params.id, this.request.body);
+      this.response.send(result);
+    } catch (err) {
+      this.next(err);
+    }
+  }
 }
 
 module.exports = BugController;

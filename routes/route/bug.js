@@ -30,6 +30,8 @@ router.get(BUG.listBug, AuthenticateRequest.authenticate(), (req, res, next) => 
   new ServiceManager({ req, res, next }).bug.bugServices.getAllBugs();
 });
 
+router.patch('/:id', AuthenticateRequest.authenticate(), (req, res, next) => new ServiceManager({ req, res, next }).bug.bugServices.modify());
+
 /**
  * API to create bug
  */
