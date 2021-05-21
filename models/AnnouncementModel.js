@@ -12,6 +12,10 @@ const AnnouncementSchema = mongoose.Schema({
   activeTill: {
     type: Date,
     default: Date.now
+  },
+  appName: {
+    type: String,
+    required: false
   }
 });
 

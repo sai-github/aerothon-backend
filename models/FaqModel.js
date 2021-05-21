@@ -20,6 +20,10 @@ const FaqSchema = mongoose.Schema({
   category: {
     type: String,
     required: true
+  },
+  appName: {
+    type: String,
+    required: false
   }
 });
 

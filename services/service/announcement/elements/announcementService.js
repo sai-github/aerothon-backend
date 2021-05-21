@@ -34,6 +34,10 @@ class AnnouncementService {
       activeTill: moment(body.activeTill)
     };
 
+    if(body.appName){
+      announcementDetail["appName"] = body.appName;
+    }
+
     const result = await this.announcementRepository.create(announcementDetail);
     return {
       status: 'success',
@@ -50,6 +54,10 @@ class AnnouncementService {
       activeFrom: moment(body.activeFrom),
       activeTill: moment(body.activeTill)
     };
+
+    if(body.appName){
+      announcementDetail["appName"] = body.appName;
+    }
 
     const result = await this.announcementRepository.fetchAndUpdate({_id: id}, announcementDetail);
 
