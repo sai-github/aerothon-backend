@@ -21,13 +21,16 @@ class BugController {
 
   async saveBug() {
     try {
-      let imageUrl = '';
-      console.log(this.request.file.filename);
-      if (this.request.file.filename) {
-        imageUrl = this.request.file.filename;
-      }
-      console.log('details here===', { ...this.request.body, imageUrl });
-      const result = await this.service.saveBug({ ...this.request.body, imageUrl });
+      const result = await this.service.saveBug(this.request.body);
+      this.response.send(result);
+    } catch (err) {
+      this.next(err);
+    }
+  }
+
+  async modify() {
+    try {
+      const result = await this.service.modify(this.request.params.id, this.request.body);
       this.response.send(result);
     } catch (err) {
       this.next(err);
