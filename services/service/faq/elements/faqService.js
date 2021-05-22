@@ -35,6 +35,10 @@ class FaqService {
       category: body.category
     };
 
+    if(body.appName){
+      faqDetail["appName"] = body.appName;
+    }
+
     const result = await this.faqRepository.create(faqDetail);
     return {
       status: 'success',
@@ -52,6 +56,10 @@ class FaqService {
       isActiveFaq: body.isActiveFaq,
       category: body.category
     };
+
+    if(body.appName){
+      faqDetail["appName"] = body.appName;
+    }
 
     const result = await this.faqRepository.fetchAndUpdate({_id: id}, faqDetail);
 

@@ -12,6 +12,18 @@ const AnnouncementSchema = mongoose.Schema({
   activeTill: {
     type: Date,
     default: Date.now
+  },
+  appName: {
+    type: String,
+    required: false
+  },
+  title: {
+    type: String,
+    required: true
+  },
+  type: {
+    type: String,
+    enum: ['success', 'error', 'info', 'warning']
   }
 });
 

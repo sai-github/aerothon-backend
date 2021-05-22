@@ -12,6 +12,10 @@ const BugSchema = mongoose.Schema({
   imageUrl: {
     type: String
   },
+  appName: {
+    type: String,
+    required: false
+  }
   priority: {
     type: String,
     required: true,
