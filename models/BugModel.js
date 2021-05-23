@@ -1,31 +1,31 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const BugSchema = mongoose.Schema({
   title: {
     type: String,
-    required: true
+    required: true,
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   imageUrl: {
-    type: String
+    type: String,
   },
   appName: {
     type: String,
-    required: false
-  }
+    required: false,
+  },
   priority: {
     type: String,
     required: true,
-    default: 'Low'
+    default: "Low",
   },
   isActiveBug: {
     type: Boolean,
     required: true,
-    default: true
-  }
+    default: true,
+  },
 });
 
-module.exports = mongoose.model('Bug', BugSchema);
+module.exports = mongoose.model("Bug", BugSchema);
